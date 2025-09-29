@@ -26,18 +26,18 @@ reg unload HKLM\TempHiv
 ```
 %LocalAppData%\Microsoft\Windows\WinX
 C:\Users\Alexander\AppData\Local\Microsoft\Windows\WinX\Group2
-%windir%\explorer.exe shell:::{2559a1f8-21d7-11d4-bdaf-00c04f60b9f0}
 ```
 ---
 ```
 sc EnumDepend <service>
-Get-Service <service> -DependentServices
-Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefaults' -Wait
 sc query state=all type=all
 sc query type= driver
 sc config cdrom start=disabled
-ncpa.cpl
 explorer.exe shell:MyComputerFolder
+%windir%\explorer.exe shell:::{2559a1f8-21d7-11d4-bdaf-00c04f60b9f0}
+Get-Service <service> -DependentServices
+Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefaults' -Wait
+ncpa.cpl
 ```
 ---
 `https://www.google.com/search?udm=14&q=%s`
