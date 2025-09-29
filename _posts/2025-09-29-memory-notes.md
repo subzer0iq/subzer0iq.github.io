@@ -46,6 +46,5 @@ C:\Users\Username\AppData\Local\Chromium\Application\chrome.exe --proxy-server="
 "C:\Program Files\Mozilla Firefox\firefox.exe" -no-deelevate -app "C:\Program Files\Mozilla Firefox\browser\application.ini"
 ```
 ---
-https://www.catalog.update.microsoft.com/home.aspx
-
-https://uupdump.net/
+<https://www.catalog.update.microsoft.com/home.aspx>
+<https://uupdump.net/>
