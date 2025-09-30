@@ -39,6 +39,7 @@ Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefa
 ncpa.cpl
 for /f %a in ('wevtutil el') do wevtutil cl "%a"
 wevtutil cl "Windows PowerShell"
+certutil -hashfile <file>
 ```
 ---
 `https://www.google.com/search?udm=14&q=%s`
