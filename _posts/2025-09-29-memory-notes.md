@@ -37,6 +37,8 @@ explorer.exe shell:MyComputerFolder
 Get-Service <service> -DependentServices
 Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefaults' -Wait
 ncpa.cpl
+for /f %a in ('wevtutil el') do wevtutil cl "%a"
+wevtutil cl "Windows PowerShell"
 ```
 ---
 `https://www.google.com/search?udm=14&q=%s`
