@@ -41,7 +41,7 @@ for /f %a in ('wevtutil el') do wevtutil cl "%a"
 wevtutil cl "Windows PowerShell"
 certutil -hashfile <file>
 CertUtil -hashfile C:\TEMP\File.img MD5 ;MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512
-;$(CertUtil -hashfile C:\TEMP\File.img MD5)[1] -replace " ",""
+$(CertUtil -hashfile C:\TEMP\File.img MD5)[1] -replace " ",""
 ```
 ---
 `https://www.google.com/search?udm=14&q=%s`
