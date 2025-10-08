@@ -30,9 +30,10 @@ C:\Users\Alexander\AppData\Local\Microsoft\Windows\WinX\Group2
 ---
 ```
 sc EnumDepend <service>
-sc query state=all type=all
+sc query state= all type= all
 sc query type= driver
-sc config cdrom start=disabled
+sc config cdrom start= disabled
+sc config NcbService start= demand
 explorer.exe shell:MyComputerFolder
 Get-Service <service> -DependentServices
 Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefaults' -Wait
