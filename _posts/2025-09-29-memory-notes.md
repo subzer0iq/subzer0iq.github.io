@@ -4,11 +4,6 @@ title: "Memory notes"
 categories: misc
 ---
 
-###### WDAC
-```
-C:\Windows\System32\CodeIntegrity\CiPolicies\Active\{PolicyId GUID}.cip
-C:\Windows\System32\CodeIntegrity\SiPolicy.p7b
-```
 ###### pnputil
 ```
 pnputil.exe /enum-drivers
@@ -35,6 +30,16 @@ certutil -hashfile <file>
 CertUtil -hashfile C:\TEMP\File.img MD5 #MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512
 $(CertUtil -hashfile C:\TEMP\File.img MD5)[1] -replace " ",""
 ```
+###### wevtutil
+```
+for /f %a in ('wevtutil el') do wevtutil cl "%a"
+wevtutil cl "Windows PowerShell"
+```
+###### WDAC
+```
+C:\Windows\System32\CodeIntegrity\CiPolicies\Active\{PolicyId GUID}.cip
+C:\Windows\System32\CodeIntegrity\SiPolicy.p7b
+```
 ---
 Visibility from 2 to 1 on each subkey in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages`
 ```
@@ -59,8 +64,6 @@ explorer.exe shell:MyComputerFolder
 Get-Service <service> -DependentServices
 Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefaults' -Wait
 ncpa.cpl
-for /f %a in ('wevtutil el') do wevtutil cl "%a"
-wevtutil cl "Windows PowerShell"
 ```
 ---
 `https://www.google.com/search?udm=14&q=%s`
