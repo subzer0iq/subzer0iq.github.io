@@ -108,7 +108,7 @@ System devices:
 - SMBus
 - System speaker
 - Terminal Server Mouse/Keyboard drivers
-- UMBu
+- UMBus
 ---
 <https://www.catalog.update.microsoft.com/home.aspx>
 
