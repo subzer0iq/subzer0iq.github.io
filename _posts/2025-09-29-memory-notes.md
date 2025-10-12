@@ -92,11 +92,14 @@ C:\Users\Username\AppData\Local\Chromium\Application\chrome.exe --proxy-server="
 ###### What to disable
 Display adapters:
 - Intel graphics (if you don’t use it, ideally should be disabled in the BIOS)
+
 Network adapters:
 - All WAN miniports
 - Microsoft ISATAP Adapter
+
 Storage controllers:
 - Microsoft iSCSI Initiator
+
 System devices:
 - Composite Bus Enumerator
 - Intel Management Engine / AMD PSP
