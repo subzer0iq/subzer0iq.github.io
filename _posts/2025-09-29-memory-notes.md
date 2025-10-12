@@ -41,6 +41,14 @@ C:\Windows\System32\CodeIntegrity\CiPolicies\Active\{PolicyId GUID}.cip
 C:\Windows\System32\CodeIntegrity\SiPolicy.p7b
 ```
 ---
+```
+Boot        0x0
+System      0x1
+Automatic   0x2
+Manual      0x3
+Disabled    0x4
+```
+---
 Visibility from 2 to 1 on each subkey in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages`
 ```
 DISM /online /Get-Packages
@@ -66,12 +74,41 @@ Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefa
 ncpa.cpl
 more /P file.txt > file2.txt
 ```
+```
+echo $PROFILE
+Get-Module -ListAvailable
+notepad $PROFILE
+$PSModuleAutoLoadingPreference = 'None'
+Import-Module Microsoft.PowerShell.Utility
+Import-Module Microsoft.PowerShell.Management
+```
 ---
 `https://www.google.com/search?udm=14&q=%s`
 ```
 C:\Users\Username\AppData\Local\Chromium\Application\chrome.exe --proxy-server="socks5://192.168.0.100:3128" --proxy-bypass-list="localhost;192.168.0.0/24"
 "C:\Program Files\Mozilla Firefox\firefox.exe" -no-deelevate -app "C:\Program Files\Mozilla Firefox\browser\application.ini"
 ```
+---
+###### What to disable
+Display adapters:
+- Intel graphics (if you don’t use it, ideally should be disabled in the BIOS)
+Network adapters:
+- All WAN miniports
+- Microsoft ISATAP Adapter
+Storage controllers:
+- Microsoft iSCSI Initiator
+System devices:
+- Composite Bus Enumerator
+- Intel Management Engine / AMD PSP
+- Intel SPI (flash) Controller
+- Microsoft GS Wavetable Synth
+- Microsoft Virtual Drive Enumerator (if not using virtual drives)
+- NDIS Virtual Network Adapter Enumerator
+- Remote Desktop Device Redirector Bus
+- SMBus
+- System speaker
+- Terminal Server Mouse/Keyboard drivers
+- UMBu
 ---
 <https://www.catalog.update.microsoft.com/home.aspx>
 
