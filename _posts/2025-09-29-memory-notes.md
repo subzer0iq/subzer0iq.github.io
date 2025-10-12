@@ -9,6 +9,32 @@ categories: misc
 C:\Windows\System32\CodeIntegrity\CiPolicies\Active\{PolicyId GUID}.cip
 C:\Windows\System32\CodeIntegrity\SiPolicy.p7b
 ```
+###### pnputil
+```
+pnputil.exe /enum-drivers
+pnputil.exe /export-driver * D:\drivers
+pnputil.exe /export-driver oem20.inf d:\drivers\realtek
+
+pnputil.exe -e
+pnputil.exe –f –d oem<number>.inf
+
+pnputil.exe /add-driver C:\drivers\*.inf /subdirs /install
+```
+###### sc
+```
+sc EnumDepend <service>
+sc query state= all type= all
+sc query type= driver
+sc config cdrom start= disabled
+sc config NcbService start= demand
+
+```
+###### CertUtil
+```
+certutil -hashfile <file>
+CertUtil -hashfile C:\TEMP\File.img MD5 #MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512
+$(CertUtil -hashfile C:\TEMP\File.img MD5)[1] -replace " ",""
+```
 ---
 Visibility from 2 to 1 on each subkey in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages`
 ```
@@ -29,20 +55,12 @@ C:\Users\Alexander\AppData\Local\Microsoft\Windows\WinX\Group2
 ```
 ---
 ```
-sc EnumDepend <service>
-sc query state= all type= all
-sc query type= driver
-sc config cdrom start= disabled
-sc config NcbService start= demand
 explorer.exe shell:MyComputerFolder
 Get-Service <service> -DependentServices
 Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefaults' -Wait
 ncpa.cpl
 for /f %a in ('wevtutil el') do wevtutil cl "%a"
 wevtutil cl "Windows PowerShell"
-certutil -hashfile <file>
-CertUtil -hashfile C:\TEMP\File.img MD5 ;MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512
-$(CertUtil -hashfile C:\TEMP\File.img MD5)[1] -replace " ",""
 ```
 ---
 `https://www.google.com/search?udm=14&q=%s`
