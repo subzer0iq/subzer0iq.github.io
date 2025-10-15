@@ -73,6 +73,7 @@ Get-Service <service> -DependentServices
 Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefaults' -Wait
 ncpa.cpl
 more /P file.txt > file2.txt
+%WINDIR%\Setup\Scripts\SetupComplete.cmd
 ```
 ```
 echo $PROFILE
