@@ -74,6 +74,7 @@ Start-Process -FilePath 'RunDll32.exe' -ArgumentList 'InetCpl.cpl, ResetIEtoDefa
 ncpa.cpl
 more /P file.txt > file2.txt
 %WINDIR%\Setup\Scripts\SetupComplete.cmd
+findstr /c:"something" %windir%\Logs\CBS\CBS.log > %userprofile%\Desktop\file.txt
 ```
 ```
 echo $PROFILE
