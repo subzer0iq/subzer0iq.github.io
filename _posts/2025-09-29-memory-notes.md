@@ -79,6 +79,7 @@ ncpa.cpl
 more /P file.txt > file2.txt
 %WINDIR%\Setup\Scripts\SetupComplete.cmd
 findstr /c:"something" %windir%\Logs\CBS\CBS.log > %userprofile%\Desktop\file.txt
+tasklist /m /fi "imagename eq netbeans.exe"
 ```
 ```
 echo $PROFILE
