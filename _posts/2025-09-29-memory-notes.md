@@ -3,7 +3,11 @@ layout: post
 title: "Memory notes"
 categories: misc
 ---
-
+###### Python
+```
+unicode_line.translate(str.maketrans('', '', '!@#$'))
+inputstring.split('"')[1::2]
+```
 ###### pnputil
 ```
 pnputil.exe /enum-drivers
@@ -119,3 +123,5 @@ System devices:
 <https://www.catalog.update.microsoft.com/home.aspx>
 
 <https://uupdump.net/>
+
+<https://www.geeksforgeeks.org/python/regular-expression-python-examples/>
