@@ -3,11 +3,18 @@ layout: post
 title: "Memory notes"
 categories: misc
 ---
-###### Python
+##### Python
 ```
 unicode_line.translate(str.maketrans('', '', '!@#$'))
 inputstring.split('"')[1::2]
 ```
+##### Linux
+```
+cat /etc/systemd/system/sshd.service.d/01-sshd-dependency.conf
+[Service]
+ExecStartPre=/bin/sleep 2
+```
+##### Windows
 ###### pnputil
 ```
 pnputil.exe /enum-drivers
