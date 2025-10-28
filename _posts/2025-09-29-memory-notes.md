@@ -14,6 +14,11 @@ cat /etc/systemd/system/sshd.service.d/01-sshd-dependency.conf
 [Service]
 ExecStartPre=/bin/sleep 2
 ```
+```
+git reset # This will unstage all files you might have staged with git add
+git checkout . # This will revert all local uncommitted changes (should be executed in repo root)
+git checkout [some_dir|file.txt] # You can also revert uncommitted changes only to particular file or directory
+```
 ##### Windows
 ###### pnputil
 ```
