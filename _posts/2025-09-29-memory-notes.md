@@ -92,6 +92,7 @@ more /P file.txt > file2.txt
 %WINDIR%\Setup\Scripts\SetupComplete.cmd
 findstr /c:"something" %windir%\Logs\CBS\CBS.log > %userprofile%\Desktop\file.txt
 tasklist /m /fi "imagename eq netbeans.exe"
+powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 ```
 ```
 echo $PROFILE
