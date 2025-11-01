@@ -112,6 +112,25 @@ Import-Module Microsoft.PowerShell.Management
 C:\Users\Username\AppData\Local\Chromium\Application\chrome.exe --proxy-server="socks5://192.168.0.100:3128" --proxy-bypass-list="localhost;192.168.0.0/24"
 "C:\Program Files\Mozilla Firefox\firefox.exe" -no-deelevate -app "C:\Program Files\Mozilla Firefox\browser\application.ini"
 ```
+```
+assoc .pdf
+assoc|more
+ftype AcroExch.Document.DC
+
+ASSOC .csv=txtfile
+
+assoc .tx1=tx1file
+ftype tx1file="%programfiles(x86)%\"Notepad++\notepad++.exe" "%1"
+
+Dism.exe /Online /Export-DefaultAppAssociations:C:\PS\DefaultAssoc.xml
+Dism.exe /Online /Import-DefaultAppAssociations:C:\PS\DefaultAssoc.xml
+
+Dism /Mount-Image /ImageFile:C:\mnt\images\install.wim /MountDir:C:\mnt\offline
+Dism.exe /Image:C:\mnt\offline /Import-DefaultAppAssociations:\\Server1\Share\DefaultAssoc.xml
+Dism.exe /Image:C:\mnt\offline /Get-DefaultAppAssociations
+
+Dism.exe /Online /Remove-DefaultAppAssociations
+```
 ---
 ###### What to disable
 Display adapters:
