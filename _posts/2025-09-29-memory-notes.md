@@ -164,3 +164,5 @@ System devices:
 <https://www.geeksforgeeks.org/python/regular-expression-python-examples/>
 
 <https://www.askpython.com/python/string/adding-commas-into-number-string>
+
+<https://woshub.com/managing-default-file-associations-in-windows-10/>
