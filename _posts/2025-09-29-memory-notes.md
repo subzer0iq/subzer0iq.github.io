@@ -95,6 +95,10 @@ tasklist /m /fi "imagename eq netbeans.exe"
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 ```
 ```
+FTYPE SMCFile="C:\some_path\SMCProgram.exe" -some_option %1 %*
+ASSOC .smc=SMCFile
+```
+```
 echo $PROFILE
 Get-Module -ListAvailable
 notepad $PROFILE
