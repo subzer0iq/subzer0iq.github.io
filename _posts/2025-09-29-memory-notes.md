@@ -94,10 +94,6 @@ tasklist /m /fi "imagename eq netbeans.exe"
 powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
 ```
 ```
-FTYPE SMCFile="C:\some_path\SMCProgram.exe" -some_option %1 %*
-ASSOC .smc=SMCFile
-```
-```
 echo $PROFILE
 Get-Module -ListAvailable
 notepad $PROFILE
@@ -110,6 +106,17 @@ Import-Module Microsoft.PowerShell.Management
 ```
 C:\Users\Username\AppData\Local\Chromium\Application\chrome.exe --proxy-server="socks5://192.168.0.100:3128" --proxy-bypass-list="localhost;192.168.0.0/24"
 "C:\Program Files\Mozilla Firefox\firefox.exe" -no-deelevate -app "C:\Program Files\Mozilla Firefox\browser\application.ini"
+```
+```
+FTYPE SMCFile="C:\some_path\SMCProgram.exe" -some_option %1 %*
+ASSOC .smc=SMCFile
+```
+```
+rename or delete a file association in HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\<extension>\UserChoice
+>assoc .pl
+.pl=Perl
+>ftype perl
+perl="C:\Perl64\bin\perl.exe" "%1" %*
 ```
 ```
 assoc .pdf
