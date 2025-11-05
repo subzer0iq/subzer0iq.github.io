@@ -38,7 +38,6 @@ sc query state= all type= all
 sc query type= driver
 sc config cdrom start= disabled
 sc config NcbService start= demand
-
 ```
 ###### CertUtil
 ```
