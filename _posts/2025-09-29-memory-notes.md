@@ -137,6 +137,14 @@ Dism.exe /Image:C:\mnt\offline /Get-DefaultAppAssociations
 
 Dism.exe /Online /Remove-DefaultAppAssociations
 ```
+```
+KEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager
+BootExecute
+Exclude disk C from check
+autocheck autochk /k:C *
+Exclude all disks
+autochk /k:* *
+```
 ---
 ###### What to disable
 Display adapters:
