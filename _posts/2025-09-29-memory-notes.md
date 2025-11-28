@@ -145,6 +145,11 @@ autocheck autochk /k:C *
 Exclude all disks
 autochk /k:* *
 ```
+```
+wmic useraccount get domain,name,sid
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SystemProtectedUserData\<SID>\AnyoneRead\LockScreen
+HideLogonBackgroundImage 1
+```
 ---
 ###### What to disable
 Display adapters:
