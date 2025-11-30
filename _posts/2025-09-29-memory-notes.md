@@ -185,3 +185,5 @@ System devices:
 <https://www.askpython.com/python/string/adding-commas-into-number-string>
 
 <https://woshub.com/managing-default-file-associations-in-windows-10/>
+
+<https://bin.entware.net/armv7sf-k2.6/Packages.html>
