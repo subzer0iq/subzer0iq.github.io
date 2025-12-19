@@ -39,6 +39,18 @@ sc query type= driver
 sc config cdrom start= disabled
 sc config NcbService start= demand
 ```
+Safe to disable
+```
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\
+StorSvc
+ShellHWDetection
+SamSs
+AppMgmt
+UsoSvc ;WaaSMedicSvc must be disabled
+EventSystem (SENS) can be delayed start
+IKEEXT
+BFE
+```
 ###### CertUtil
 ```
 certutil -hashfile <file>
