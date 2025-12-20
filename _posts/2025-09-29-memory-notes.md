@@ -50,6 +50,7 @@ UsoSvc ;WaaSMedicSvc must be disabled
 EventSystem (SENS) can be delayed start
 IKEEXT
 BFE
+WlanSvc ;Wifi
 ```
 ###### CertUtil
 ```
