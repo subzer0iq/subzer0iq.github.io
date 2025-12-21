@@ -83,6 +83,9 @@ DISM /online /Get-Packages
 DISM /online /Add-Package /PackageName:Microsoft-Windows-PhotoPremiumPackage~31bf3856ad364e35~amd64~~6.1.7601.17514
 DISM /online /Remove-Package /PackageName:Microsoft-Windows-PhotoPremiumPackage~31bf3856ad364e35~amd64~~6.1.7601.17514
 ```
+```
+DISM /Online /Add-Package /PackagePath:c:\packages\Windows11.0-KB5053598-x64.msu
+```
 ---
 ```
 reg load HKLM\TempHiv %WinDRV%\Windows\system32\config\system
