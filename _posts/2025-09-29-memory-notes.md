@@ -51,6 +51,7 @@ EventSystem (SENS) can be delayed start
 IKEEXT
 BFE
 WlanSvc ;Wifi
+BluetoothUserService*
 ```
 ###### CertUtil
 ```
