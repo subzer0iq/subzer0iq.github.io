@@ -52,6 +52,7 @@ IKEEXT
 BFE
 WlanSvc ;Wifi
 BluetoothUserService*
+bthserv ;after devices discovery
 ```
 ###### CertUtil
 ```
