@@ -45,6 +45,7 @@ Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\
 StorSvc
 ShellHWDetection
 AppMgmt
+AppXSvc
 UsoSvc ;WaaSMedicSvc must be disabled
 EventSystem (SENS) can be delayed start
 IKEEXT
